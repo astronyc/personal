@@ -8,6 +8,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="cleartype" content="on">
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400i,900i" rel="stylesheet">
+
 <?php wp_head(); ?>
 
 <?php
@@ -24,7 +27,7 @@
 	<header id="primary-nav">
 		<div class="inner-wrap">
 			<div class="logo-wrap">
-				<h1>Bike</h1>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1>drea ibarra</h1></a>
 			</div>
 
 			<div class="links-wrap">
@@ -43,5 +46,3 @@
 	</header>
 
 	<div class="site-content">
-
-	HAHAHA
