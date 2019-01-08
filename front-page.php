@@ -7,18 +7,17 @@ get_header(); ?>
 
 <div class="split-wrap">
     <div class="inner-wrap">
-        <div class="photo-wrap">
-            <div class="content-wrap">
-                <h1 class="shiny"><a href="/photography/">Photographer</a></h1>
+        <div class="black-wrap">
+            <div class="content-wrap title">
+                <h1>Drea Ibarra</h1>
             </div>
         </div>
-
-        <div class="dev-wrap">
-            <div class="content-wrap">
-                <h1 class="shiny"><a href="/webdev/">Developer</h1>
-            </div>
+        <div class="white-wrap">
+            <menu>
+                <li class="link li-photography"><a href="/photography/">Photographer</a></li>
+                <li class="link li-developer"><a href="">Developer</a></li>
+                <li class="link li-astronaut"><a href="">Digital Astronaut</a></li>
+            </menu>
         </div>
-
-
     </div>
 </div>

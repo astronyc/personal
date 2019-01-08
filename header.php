@@ -25,7 +25,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<script type="text/javascript" src="/src/js/app.js"></script>
+
 
 </head>
 
