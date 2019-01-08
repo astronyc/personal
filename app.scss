@@ -1,0 +1,330 @@
+@import "resources";
+
+html,
+body {
+	margin: 0px;
+	background-color: whitesmoke;
+}
+// 1. -- Header
+.page-id-38 #primary-nav {
+	display: none;
+}
+header#primary-nav {
+	background-color: whitesmoke;
+	height: 20vh;
+	.inner-wrap {
+		display: flex;
+		max-width: 90vw;
+		margin: 0 auto;
+		align-items: baseline;
+		.logo-wrap {
+			flex: 1;
+			padding-left: 10px;
+
+			h1 {
+				font-family: "Playfair Display SC";
+				font-style: italic;
+				font-weight: 400;
+				font-size: 54px;
+				color: black;
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+
+		.links-wrap {
+			flex: 1;
+			font-family: "Work Sans";
+			letter-spacing: 8 px;
+
+			nav {
+				text-align: right;
+
+				ul {
+					list-style: none;
+					display: flex;
+					justify-content: flex-end;
+
+					a {
+						padding: 0 20px;
+						color: black;
+						font-size: 12px;
+						text-transform: uppercase;
+						text-decoration: none;
+						@include bp(medium) {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 2. Home Page
+.split-wrap {
+	.inner-wrap {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 100vh;
+		font-family: "Work Sans";
+		text-transform: uppercase;
+		.black-wrap {
+			background-color: black;
+			flex: 1;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			.content-wrap {
+				color: whitesmoke;
+				.shiny {
+					background-image: -webkit-linear-gradient(
+						left,
+						whitesmoke 25%,
+						#fde071 37.5%,
+						#996a6e 50%,
+						darkblue 62.5%,
+						whitesmoke 75%
+					);
+					background-image: linear-gradient(
+						90deg,
+						whitesmoke 25%,
+						#fde071 37.5%,
+						#996a6e 50%,
+						darkblue 62.5%,
+						whitesmoke 75%
+					);
+					background-position: right center;
+					background-size: 400% auto;
+					-webkit-background-clip: text;
+					background-clip: text;
+					color: black;
+					-webkit-text-fill-color: transparent;
+					transition: color 400ms linear;
+				}
+
+				.shiny:hover {
+					background-position: left center;
+					color: #ef9671;
+					transition: background-position 1600ms ease-out;
+				}
+
+				h1 {
+					font-family: "Playfair Display SC";
+					font-style: italic;
+					font-weight: 400;
+					font-size: 100px;
+					color: #eabeaf;
+					letter-spacing: 4px;
+				}
+				a {
+					text-decoration: none;
+				}
+				a:visited {
+					color: white;
+				}
+			}
+		}
+		.white-wrap {
+			background-color: whitesmoke;
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			h1 {
+				color: white;
+				margin-bottom: 1rem;
+			}
+
+			menu {
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				position: relative;
+				li {
+					display: block;
+					list-style: none;
+					padding: 0 0.5em;
+					&.current a {
+						color: black;
+					}
+				}
+				a {
+					color: black;
+					display: block;
+					line-height: 2.5em;
+					text-decoration: none;
+					margin: 0 70px;
+					font-size: 24px;
+				}
+				.link {
+					position: relative;
+				}
+				.link:after {
+					content: "";
+					position: absolute;
+					width: 0;
+					height: 3px;
+					display: block;
+					margin-top: 5px;
+					right: 0;
+					background: #eabeaf;
+					transition: width 0.3s ease;
+					-webkit-transition: width 0.3s ease;
+				}
+
+				.link:hover:after {
+					width: 100%;
+					left: 0;
+					background: #eabeaf {
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 3. Main Photography Page
+.site-wrap {
+	.main-wrap {
+		display: flex;
+		flex-direction: row;
+		background-color: whitesmoke;
+		font-family: "Work Sans";
+		a {
+			color: black;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: "Work Sans";
+			font-weight: 200;
+		}
+		.left-wrap {
+			display: flex;
+			flex-direction: column;
+
+			.left-upper {
+				height: 40vh;
+				width: 25vw;
+				display: flex;
+
+				justify-content: center;
+				.content-wrap {
+					transform: rotate(90deg);
+				}
+			}
+			.left-lower {
+				height: 40vh;
+				width: 25vw;
+				display: flex;
+				justify-content: center;
+				.content-wrap {
+					transform: rotate(90deg);
+				}
+			}
+		}
+		.image-container {
+			height: 80vh;
+			width: 50vw;
+		}
+		.right-wrap {
+			display: flex;
+			flex-direction: column;
+			.right-upper {
+				height: 40vh;
+				width: 25vw;
+				display: flex;
+				justify-content: center;
+				.content-wrap {
+					transform: rotate(90deg);
+				}
+			}
+			.right-lower {
+				height: 40vh;
+				width: 25vw;
+				display: flex;
+				justify-content: center;
+				.content-wrap {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+	.bottom-wrap {
+		background-color: whitesmoke;
+		display: flex;
+		color: red;
+		.bar-wrap {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+}
+
+// Main Developer Page
+#dev-page {
+	.container-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		.box {
+			width: 60vw;
+			height: 30vh;
+		}
+		.box1 {
+			background-color: orange;
+			flex: 1;
+		}
+		.box2 {
+			background-color: lightgreen;
+			flex: 1;
+		}
+		.box3 {
+			background-color: blue;
+			flex: 1;
+		}
+		.box4 {
+			background-color: red;
+			flex: 1;
+		}
+		.box5 {
+			background-color: pink;
+			flex: 1;
+		}
+		.box6 {
+			background-color: yellow;
+			flex: 1;
+		}
+	}
+}
+
+// Photo Project Page
+.scrolling-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	margin-left: 80px;
+	margin-right: 60px;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.card {
+		display: flex;
+		flex: 0 0 auto;
+
+		img {
+			height: 70vh;
+			padding: 20px 20px 20px 0;
+		}
+	}
+}
