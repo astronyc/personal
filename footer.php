@@ -6,7 +6,7 @@
       <nav class="large-auto cell footer-nav">
         <ul class="vertical medium-horizontal menu">
           <li><a href="https://wordpress.org" target="_blank" title="Built with WordPress"><i class="fa fa-wordpress"
-                aria-hidden="true"></i> <span class="hide">Built with WordPress</span></a></li>
+                aria-hidden="true"></i> <span class="hide">Built by Astro</span></a></li>
           <?php 
               wp_nav_menu(array(
                 'container' => false,
@@ -31,7 +31,8 @@
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
 
 </body>
 

@@ -4,140 +4,222 @@ html,
 body {
 	margin: 0px;
 	background-color: whitesmoke;
+	overflow-x: hidden;
 }
-// 1. -- Header
-.page-id-38 #primary-nav {
-	display: none;
-}
-header#primary-nav {
-	background-color: whitesmoke;
-	height: 20vh;
-	.inner-wrap {
-		display: flex;
-		max-width: 90vw;
-		margin: 0 auto;
-		align-items: baseline;
-		.logo-wrap {
-			flex: 1;
-			padding-left: 10px;
+body {
+	opacity: 0;
+	transition: 0.3s;
 
-			h1 {
-				font-family: "Playfair Display SC";
-				font-style: italic;
-				font-weight: 400;
-				font-size: 54px;
-				color: black;
-			}
-			a {
-				text-decoration: none;
-			}
-		}
-
-		.links-wrap {
-			flex: 1;
-			font-family: "Work Sans";
-			letter-spacing: 8 px;
-
-			nav {
-				text-align: right;
-
-				ul {
-					list-style: none;
-					display: flex;
-					justify-content: flex-end;
-
-					a {
-						padding: 0 20px;
-						color: black;
-						font-size: 12px;
-						text-transform: uppercase;
-						text-decoration: none;
-						@include bp(medium) {
-							font-size: 20px;
-						}
-					}
-				}
-			}
-		}
+	&.fade-in {
+		opacity: 1;
 	}
 }
 
-// 2. Home Page
-.split-wrap {
-	.inner-wrap {
+//Navbar
+
+//Color Variables
+$color1: #eabeaf; //Red
+$color2: whitesmoke; //Whitesmoke
+$color3: #903749; //Maroon
+
+// Base Styles
+
+h1 {
+	font-size: 3em;
+	a {
+		text-decoration: none;
+	}
+}
+
+.navBar {
+	background-color: $color2;
+	min-width: 100%;
+}
+
+.logo {
+	display: inline-block;
+	margin: 0;
+	h1 {
+		margin: 0;
+		text-decoration: none;
+		color: black;
+	}
+}
+
+// Content Wrapper
+.wrapper {
+	margin: 0px auto;
+	padding: 0 2%;
+}
+
+// Full Navigation, including mobile menu
+nav {
+	ul {
 		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		height: 100vh;
-		font-family: "Work Sans";
-		text-transform: uppercase;
-		.black-wrap {
-			background-color: black;
-			flex: 1;
-			display: flex;
-			align-items: flex-end;
-			justify-content: center;
-			.content-wrap {
-				color: whitesmoke;
-				.shiny {
-					background-image: -webkit-linear-gradient(
-						left,
-						whitesmoke 25%,
-						#fde071 37.5%,
-						#996a6e 50%,
-						darkblue 62.5%,
-						whitesmoke 75%
-					);
-					background-image: linear-gradient(
-						90deg,
-						whitesmoke 25%,
-						#fde071 37.5%,
-						#996a6e 50%,
-						darkblue 62.5%,
-						whitesmoke 75%
-					);
-					background-position: right center;
-					background-size: 400% auto;
-					-webkit-background-clip: text;
-					background-clip: text;
-					color: black;
-					-webkit-text-fill-color: transparent;
-					transition: color 400ms linear;
-				}
+		justify-content: space-between;
+		list-style-type: none;
+		width: 50%;
 
-				.shiny:hover {
-					background-position: left center;
-					color: #ef9671;
-					transition: background-position 1600ms ease-out;
-				}
+		a {
+			color: $color1;
+			text-decoration: none;
+			transition: all 0.5s ease;
 
+			&:hover {
+				color: $color3;
+			}
+		}
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	#menu-toggle {
+		display: none;
+	}
+
+	.label-toggle {
+		display: none;
+	}
+
+	.wrapper {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width: 768px) {
+		nav {
+			.logo {
 				h1 {
 					font-family: "Playfair Display SC";
 					font-style: italic;
-					font-weight: 400;
-					font-size: 100px;
-					color: #eabeaf;
-					letter-spacing: 4px;
+					text-shadow: 1px 1px $color1;
 				}
 				a {
 					text-decoration: none;
 				}
-				a:visited {
-					color: white;
+			}
+			ul {
+				padding-left: 0;
+				a {
+					color: $color2;
+					text-transform: uppercase;
+					letter-spacing: 2px;
 				}
 			}
 		}
-		.white-wrap {
-			background-color: whitesmoke;
+		ul {
+			background-color: $color1;
+			display: block;
+			height: 0;
+			list-style-type: none;
+			opacity: 0;
+			text-align: center;
+			transition: all 1s ease;
+			width: 100%;
+			visibility: hidden;
+		}
+
+		li {
+			border-bottom: 2px solid $color2;
+			color: $color2;
+			display: block;
+			font-size: 1.5em;
+			padding: 2em 0;
+		}
+
+		#menu-toggle:checked ~ ul {
+			opacity: 1;
+			height: 60vh;
+			visibility: visible;
+		}
+
+		.label-toggle {
+			background: linear-gradient(
+				to bottom,
+				$color1 0%,
+				$color1 20%,
+				transparent 20%,
+				transparent 40%,
+				$color1 40%,
+				$color1 60%,
+				transparent 60%,
+				transparent 80%,
+				$color1 80%,
+				$color1 100%
+			); //Gradient Hamburger
+			cursor: pointer;
+			display: block;
+			float: right;
+			height: 35px;
+			margin-top: 1em;
+			width: 35px;
+		}
+
+		.wrapper {
+			display: block;
+			padding: 40px 115px;
+		}
+	}
+}
+
+// 1. -- Header
+.page-id-38 nav {
+	display: none;
+}
+
+// 2. Home Page
+.landing-wrap {
+	.inner-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		height: 100vh;
+		text-transform: uppercase;
+		.page-wrap {
+			background-size: cover;
+			background-position: center;
 			flex: 1;
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			flex-direction: column;
+			opacity: 0.6;
 
-			* {
-				margin: 0;
-				padding: 0;
+			.content-wrap {
+				display: flex;
+				flex-direction: row;
+				justify-content: left;
+				height: 80vh;
+				width: 100vw;
+				.title {
+					align-items: flex-start;
+					flex: 1;
+
+					h1 {
+						font-family: "Playfair Display SC";
+						font-style: italic;
+						font-weight: 400;
+						font-size: 60px;
+						color: #eabeaf;
+						letter-spacing: 6px;
+						margin: 0;
+						padding: 60px 0 0 60px;
+						text-shadow: 2px 2px #251212;
+					}
+					a {
+						text-decoration: none;
+					}
+					a:visited {
+						color: white;
+					}
+				}
 			}
+		}
+		.clear-wrap {
+			background-color: transparent;
+			flex: 1;
+			justify-content: left;
+			align-items: left;
 
 			h1 {
 				color: white;
@@ -149,21 +231,20 @@ header#primary-nav {
 				display: -ms-flexbox;
 				display: flex;
 				position: relative;
+				padding: 0px;
 				li {
 					display: block;
 					list-style: none;
 					padding: 0 0.5em;
-					&.current a {
-						color: black;
-					}
 				}
 				a {
-					color: black;
+					color: #eabeaf;
 					display: block;
 					line-height: 2.5em;
 					text-decoration: none;
-					margin: 0 70px;
-					font-size: 24px;
+					font-size: 18px;
+					letter-spacing: 4px;
+					font-family: "Raleway";
 				}
 				.link {
 					position: relative;
@@ -172,11 +253,11 @@ header#primary-nav {
 					content: "";
 					position: absolute;
 					width: 0;
-					height: 3px;
+					height: 1px;
 					display: block;
 					margin-top: 5px;
 					right: 0;
-					background: #eabeaf;
+					background: darkgrey;
 					transition: width 0.3s ease;
 					-webkit-transition: width 0.3s ease;
 				}
@@ -188,7 +269,146 @@ header#primary-nav {
 						position: relative;
 					}
 				}
+				div {
+					padding: 0 40px;
+				}
+				.arrow-wrap {
+					display: flex;
+					justify-content: flex-end;
+				}
 			}
+			i.fas.fa-arrow-circle-down {
+				flex-grow: 3;
+				font-size: 40px;
+				opacity: 0.7;
+				text-align: center;
+			}
+		}
+	}
+}
+.about-wrap-photo {
+	background-color: #eabeaf;
+	.content-wrap {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 120px 0;
+		.image-wrap {
+			img {
+				height: 30vw;
+				padding: 0 50px;
+			}
+		}
+		.text-wrap {
+			font-family: "Raleway";
+			font-size: 24px;
+			line-height: 2;
+			p {
+				margin: 0;
+				padding: 0 40px;
+			}
+		}
+	}
+}
+.about-wrap-dev {
+	background-color: #d8b2a6;
+	.content-wrap {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 120px 0;
+		opacity: 0.9;
+		.image-wrap {
+			img {
+				height: 30vw;
+				padding: 0 50px;
+			}
+		}
+		.text-wrap {
+			font-family: "Raleway";
+			font-size: 24px;
+			line-height: 2;
+			p {
+				margin: 0;
+				padding: 0 40px;
+			}
+		}
+	}
+}
+.about-wrap-astro {
+	background-color: #cca096;
+	.content-wrap {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 120px 0;
+		opacity: 0.9;
+		.image-wrap {
+			img {
+				height: 30vw;
+				padding: 0 30px;
+			}
+		}
+		.text-wrap {
+			font-family: "Raleway";
+			font-size: 24px;
+			line-height: 2;
+			p {
+				margin: 0;
+				padding: 0 30px;
+			}
+		}
+	}
+}
+.bottom-navbar-landing {
+	background-color: #cca096;
+	padding: 20px 0;
+	color: whitesmoke;
+
+	ul {
+		margin: 0;
+		list-style: none;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 0;
+		font-family: "Raleway";
+		li {
+			a {
+				text-decoration: none;
+				color: whitesmoke;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+		}
+	}
+}
+.page-id-38 footer {
+	display: none;
+}
+
+// Simple Footer Used For Photo, Dev, and Astro Page (Different than regular footer)
+.page-footer {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 40px;
+	a {
+		font-family: "Raleway";
+		font-size: 20px;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 4px;
+		color: #eabeaf;
+		line-height: 2.5em;
+		padding-right: 15px;
+	}
+	.footer-menu-1 {
+		justify-content: flex-start;
+	}
+	.footer-menu-2 {
+		display: flex;
+		flex-direction: column;
+		.menu-right {
+			align-self: flex-end;
 		}
 	}
 }
@@ -261,7 +481,7 @@ header#primary-nav {
 	.bottom-wrap {
 		background-color: whitesmoke;
 		display: flex;
-		color: red;
+
 		.bar-wrap {
 			display: flex;
 			flex-direction: row;
@@ -272,36 +492,94 @@ header#primary-nav {
 
 // Main Developer Page
 #dev-page {
-	.container-wrap {
-		display: flex;
-		flex-wrap: wrap;
+	.page-wrap {
+		background-size: cover;
+		background-position: center;
+		.row {
+			display: flex;
+			justify-content: center;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
 		.box {
-			width: 60vw;
-			height: 30vh;
+			width: 45vw;
+			height: 45vh;
+			opacity: 0.5;
+			margin: 20px;
+			.content-wrap {
+				.text-overlay {
+					color: whitesmoke;
+					font-size: 50px;
+					opacity: 0;
+					width: 45vw;
+					height: 40vh;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-content: center;
+					text-align: center;
+					a {
+						text-decoration: none;
+						color: whitesmoke;
+						display: block;
+						line-height: 2em;
+						margin-top: -1em;
+						font-family: "Raleway";
+						top: 10%;
+					}
+
+					.link {
+						position: relative;
+					}
+					.link:after {
+						content: "";
+						position: relative;
+						width: 0;
+						height: 3px;
+						display: block;
+						margin-top: 5px;
+						right: 0;
+						background: whitesmoke;
+						transition: width 0.3s ease;
+						-webkit-transition: width 0.3s ease;
+					}
+
+					.link:hover:after {
+						width: 100%;
+						left: 0;
+						background: whitesmoke {
+							position: relative;
+						}
+					}
+				}
+				.text-overlay:hover {
+					opacity: 1;
+					transition: 0.3s ease;
+				}
+			}
+		}
+		.box:hover {
+			opacity: 1;
+			transition: 0.3s ease;
+			filter: drop-shadow(0 0 30px #333);
 		}
 		.box1 {
 			background-color: orange;
-			flex: 1;
 		}
 		.box2 {
 			background-color: lightgreen;
-			flex: 1;
 		}
 		.box3 {
 			background-color: blue;
-			flex: 1;
 		}
 		.box4 {
 			background-color: red;
-			flex: 1;
 		}
 		.box5 {
 			background-color: pink;
-			flex: 1;
 		}
 		.box6 {
 			background-color: yellow;
-			flex: 1;
 		}
 	}
 }
@@ -312,8 +590,8 @@ header#primary-nav {
 	flex-wrap: nowrap;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
-	margin-left: 80px;
-	margin-right: 60px;
+	margin-left: 100px;
+	margin-right: 100px;
 
 	&::-webkit-scrollbar {
 		display: none;
@@ -324,7 +602,75 @@ header#primary-nav {
 
 		img {
 			height: 70vh;
-			padding: 20px 20px 20px 0;
+			padding: 0px 20px 20px 0;
+		}
+	}
+}
+
+// Astro Project Page
+
+.page-id-214 header {
+	display: none;
+}
+.page-id-214 footer {
+	display: none;
+}
+
+.slider-wrap {
+	position: relative;
+	.slick-dots {
+		position: absolute;
+		bottom: 0;
+		color: blue;
+		display: inline-block;
+		top: 40%;
+		bottom: auto;
+		left: 95%;
+		li {
+			display: block;
+		}
+		li button:before {
+			color: whitesmoke;
+		}
+		li.slick-active button:before {
+			color: whitesmoke;
+		}
+	}
+
+	div {
+		margin: 0;
+		padding: 0;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+}
+.slick-vertical .slick-slide {
+	border: none !important;
+}
+
+// About Me Page
+.about-me-wrap {
+	display: flex;
+	background-color: #f8c8bb;
+	.content-wrap {
+		display: flex;
+		flex-direction: row;
+		padding: 120px 0;
+		.image-wrap {
+			padding: 0 100px;
+			img {
+				height: 40vw;
+			}
+		}
+		.text-wrap {
+			display: flex;
+			font-family: "Raleway";
+			flex-direction: column;
+			color: black;
+			font-size: 24px;
+			line-height: 2;
+			padding-right: 30px;
 		}
 	}
 }
