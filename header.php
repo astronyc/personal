@@ -27,7 +27,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
-	<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,500" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
 	 crossorigin="anonymous">
 
@@ -43,16 +43,20 @@
 			<div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<h1>drea ibarra</h1>
 				</a></div><!-- Logo -->
-			<input type="checkbox" id="menu-toggle" />
-			<label for="menu-toggle" class="label-toggle"></label>
-			<ul>
-				<?php wp_nav_menu(array(
+
+			<div class="menu-toggle-wrap">
+				<input type="checkbox" id="menu-toggle" />
+				<label for="menu-toggle" class="label-toggle"></label>
+				<ul>
+					<?php wp_nav_menu(array(
 							'theme_location' => 'primary',
 							'container' => false,
 							'items_wrap' => '%3$s', // removes the <ul> from the menu as we're using our own markup
 							'fallback_cb' => mytheme_menu_fallback
 						)); ?>
-			</ul>
+				</ul>
+			</div>
+
 		</nav>
 	</nav>
 
