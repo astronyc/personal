@@ -9,14 +9,21 @@ $photo_page_main_photo = get_field("photo_page_main_photo");
 get_header(); ?>
 
 
+<?php if(get_field('photo_banner_repeater')): ?>
 
-<div class="site-wrap">
-    <div class="main-wrap">
+<div class="photo-wrap">
 
-        <div style="background: url(<?php echo $photo_page_main_photo; ?> ) no-repeat center; width:100%; height: 80vh; background-size:cover;"></div>
+    <?php while(has_sub_field('photo_banner_repeater')): ?>
+
+    <div class="image-wrap" style="background-image:url(<?php the_sub_field('photo_project_image'); ?>)">
+        <p>portraits</p>
     </div>
+
+    <?php endwhile; ?>
+
 </div>
-</div>
+<?php endif; ?>
+
 
 <div class="page-footer">
     <div class="footer-menu-1">
@@ -25,9 +32,6 @@ get_header(); ?>
                 <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> Beam me back home</a>
         </div>
         <div class="astronaut">
-            <div class="astronaut-icon">
-                <i class="fas fa-user-astronaut"></i>
-            </div>
             <div class="astronaut-location">
                 <h5>Orbiting:</h5>
                 <h5 class="current-location">New York, NY</h5>

@@ -38,26 +38,49 @@
 
 <body <?php body_class(); ?>>
 
-	<nav class="navBar">
-		<nav class="wrapper">
-			<div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<h1>drea ibarra</h1>
-				</a></div><!-- Logo -->
+	<div class="navbar">
+		<div class="navbar-wrapper">
+			<div class="content-wrap">
+				<div class="title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<h1>Drea Ibarra</h1>
+				</div>
+				<div class="menu-items">
+					<menu>
+						<div>
+							<li class="link li-photography"><a href="/photography/">Photographer</a></li>
+						</div>
+						<div>
+							<li class="link li-developer"><a href="/web-developer/">Developer</a></li>
+						</div>
+						<div>
+							<li class="link li-astronaut"><a href="/astro/">Space Deviant</a></li>
+						</div>
+					</menu>
+				</div>
+			</div>
+		</div>
 
-			<div class="menu-toggle-wrap">
-				<input type="checkbox" id="menu-toggle" />
-				<label for="menu-toggle" class="label-toggle"></label>
-				<ul>
-					<?php wp_nav_menu(array(
+		<!--<nav class="navBar">
+			<nav class="wrapper">
+				<div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<h1>drea ibarra</h1>
+					</a></div>
+
+				<div class="menu-toggle-wrap">
+					<input type="checkbox" id="menu-toggle" />
+					<label for="menu-toggle" class="label-toggle"></label>
+					<ul>
+						<?php wp_nav_menu(array(
 							'theme_location' => 'primary',
 							'container' => false,
 							'items_wrap' => '%3$s', // removes the <ul> from the menu as we're using our own markup
 							'fallback_cb' => mytheme_menu_fallback
 						)); ?>
-				</ul>
-			</div>
+					</ul>
+				</div>
 
-		</nav>
-	</nav>
+			</nav>
+			</nav>-->
 
-	<div class="site-content">
+		<div class="site-content">

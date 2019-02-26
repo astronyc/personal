@@ -3,8 +3,7 @@
 html,
 body {
 	margin: 0px;
-	background-color: whitesmoke;
-	overflow-x: hidden;
+	background-color: rgb(235, 235, 235);
 }
 body {
 	opacity: 0;
@@ -16,6 +15,95 @@ body {
 }
 
 //Navbar
+.navbar {
+	.navbar-wrapper {
+		.content-wrap {
+			display: flex;
+			flex-direction: row;
+			justify-content: left;
+			align-items: baseline;
+			text-transform: uppercase;
+			.title {
+				align-items: flex-start;
+				flex: 1;
+
+				h1 {
+					font-family: "Raleway";
+					font-weight: 400;
+					font-size: 44px;
+					color: white;
+					letter-spacing: 6px;
+					margin: 0;
+					padding: 60px 0 40px 90px;
+				}
+				a {
+					text-decoration: none;
+				}
+				a:visited {
+					color: white;
+				}
+			}
+			.menu-items {
+				background-color: transparent;
+				justify-content: left;
+				padding-right: 90px;
+
+				h1 {
+					color: white;
+					margin-bottom: 1rem;
+				}
+
+				menu {
+					display: -webkit-flex;
+					display: -ms-flexbox;
+					display: flex;
+					position: relative;
+					padding: 0px;
+					div {
+						padding-left: 3em;
+					}
+					li {
+						display: block;
+						list-style: none;
+						padding-left: 3px;
+					}
+					a {
+						color: black;
+						display: block;
+						line-height: 2.5em;
+						text-decoration: none;
+						font-size: 13px;
+						letter-spacing: 4px;
+						font-family: "Raleway";
+					}
+					.link {
+						position: relative;
+					}
+					.link:after {
+						content: "";
+						position: absolute;
+						width: 0;
+						height: 1px;
+						display: block;
+						margin-top: 5px;
+						right: 0;
+						background: darkgrey;
+						transition: width 0.3s ease;
+						-webkit-transition: width 0.3s ease;
+					}
+
+					.link:hover:after {
+						width: 100%;
+						left: 0;
+						background: rgb(176, 203, 212) {
+							position: relative;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 //Color Variables
 $color1: #eabeaf; //Red
@@ -174,7 +262,6 @@ nav {
 	.inner-wrap {
 		display: flex;
 		flex-wrap: wrap;
-		height: 100vh;
 		text-transform: uppercase;
 		.page-wrap {
 			background-size: cover;
@@ -182,28 +269,25 @@ nav {
 			flex: 1;
 			display: flex;
 			flex-direction: column;
-			opacity: 0.6;
 
 			.content-wrap {
 				display: flex;
 				flex-direction: row;
 				justify-content: left;
-				height: 80vh;
+				align-items: baseline;
 				width: 100vw;
 				.title {
 					align-items: flex-start;
 					flex: 1;
 
 					h1 {
-						font-family: "Playfair Display SC";
-						font-style: italic;
+						font-family: "Raleway";
 						font-weight: 400;
-						font-size: 60px;
-						color: #eabeaf;
+						font-size: 44px;
+						color: white;
 						letter-spacing: 6px;
 						margin: 0;
-						padding: 60px 0 0 60px;
-						text-shadow: 2px 2px #251212;
+						padding: 60px 0 0 90px;
 					}
 					a {
 						text-decoration: none;
@@ -212,76 +296,70 @@ nav {
 						color: white;
 					}
 				}
-			}
-		}
-		.clear-wrap {
-			background-color: transparent;
-			flex: 1;
-			justify-content: left;
-			align-items: left;
+				.menu-items {
+					background-color: transparent;
+					justify-content: left;
+					padding-right: 90px;
 
-			h1 {
-				color: white;
-				margin-bottom: 1rem;
-			}
+					h1 {
+						color: white;
+						margin-bottom: 1rem;
+					}
 
-			menu {
-				display: -webkit-flex;
-				display: -ms-flexbox;
-				display: flex;
-				position: relative;
-				padding: 0px;
-				li {
-					display: block;
-					list-style: none;
-					padding: 0 0.5em;
-				}
-				a {
-					color: #eabeaf;
-					display: block;
-					line-height: 2.5em;
-					text-decoration: none;
-					font-weight: 200;
-					font-size: 24px;
-					letter-spacing: 4px;
-					font-family: "Raleway";
-				}
-				.link {
-					position: relative;
-				}
-				.link:after {
-					content: "";
-					position: absolute;
-					width: 0;
-					height: 1px;
-					display: block;
-					margin-top: 5px;
-					right: 0;
-					background: darkgrey;
-					transition: width 0.3s ease;
-					-webkit-transition: width 0.3s ease;
-				}
-
-				.link:hover:after {
-					width: 100%;
-					left: 0;
-					background: #eabeaf {
+					menu {
+						display: -webkit-flex;
+						display: -ms-flexbox;
+						display: flex;
 						position: relative;
+						padding: 0px;
+						div {
+							padding-left: 3em;
+						}
+						li {
+							display: block;
+							list-style: none;
+							padding-left: 3px;
+						}
+						a {
+							color: black;
+							display: block;
+							line-height: 2.5em;
+							text-decoration: none;
+							font-size: 13px;
+							letter-spacing: 4px;
+							font-family: "Raleway";
+						}
+						.link {
+							position: relative;
+						}
+						.link:after {
+							content: "";
+							position: absolute;
+							width: 0;
+							height: 1px;
+							display: block;
+							margin-top: 5px;
+							right: 0;
+							background: darkgrey;
+							transition: width 0.3s ease;
+							-webkit-transition: width 0.3s ease;
+						}
+						.link:hover:after {
+							width: 100%;
+							left: 0;
+							background: rgb(176, 203, 212) {
+								position: relative;
+							}
+						}
 					}
 				}
-				div {
-					padding: 0 40px;
-				}
-				.arrow-wrap {
-					display: flex;
-					justify-content: flex-end;
-				}
 			}
-			i.fas.fa-arrow-circle-down {
-				flex-grow: 3;
-				font-size: 40px;
-				opacity: 0.7;
-				text-align: center;
+			.image-wrap {
+				height: 60vh;
+				margin: 0 90px;
+				background-position: center;
+				background-size: cover;
+				opacity: 0.6;
 			}
 		}
 	}
@@ -390,40 +468,38 @@ nav {
 .page-footer {
 	display: flex;
 	justify-content: space-between;
-	margin: 60px 40px;
+	margin: 40px 90px 10px 90px;
 	a {
 		font-family: "Raleway";
-		font-size: 20px;
-		font-weight: 200;
+		font-size: 14px;
+		font-weight: 400;
 		text-transform: uppercase;
 		text-decoration: none;
 		letter-spacing: 4px;
-		color: #eabeaf;
+		color: #333;
 		line-height: 2.5em;
-		padding-right: 15px;
 	}
 	.footer-menu-1 {
 		justify-content: flex-start;
+		padding-top: 25px;
 		.astronaut {
 			display: flex;
 			flex-direction: row;
 			.fa-user-astronaut {
-				font-size: 70px;
-				color: #eabeaf;
-				padding-top: 15px;
+				font-size: 40px;
+				color: white;
 			}
 			.astronaut-location {
 				font-weight: 200;
-				font-size: 20px;
+				font-size: 16px;
 				line-height: 0;
 				text-transform: uppercase;
 				font-family: "Raleway";
 				letter-spacing: 4px;
 				padding-top: 20px;
-				padding-left: 20px;
-				color: #eabeaf;
+
 				h5 {
-					font-weight: 200;
+					font-weight: 400;
 				}
 			}
 		}
@@ -438,78 +514,44 @@ nav {
 }
 
 // 3. Main Photography Page
-.site-wrap {
-	.main-wrap {
+.photo-wrap {
+	background-size: cover;
+	background-position: center;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	.image-wrap {
 		display: flex;
-		flex-direction: row;
-		background-color: whitesmoke;
-		font-family: "Work Sans";
-		a {
-			color: black;
-			text-decoration: none;
+		justify-content: center;
+		align-items: center;
+		height: 60vh;
+		margin: 0 90px;
+		margin-bottom: 60px;
+		background-position: center;
+		background-size: cover;
+		opacity: 0.7;
+		transition: 0.5s ease;
+		img {
+			opacity: 0.7;
+		}
+		p {
+			opacity: 0;
 			text-transform: uppercase;
-			font-family: "Work Sans";
-			font-weight: 200;
-		}
-		.left-wrap {
-			display: flex;
-			flex-direction: column;
-
-			.left-upper {
-				height: 40vh;
-				width: 25vw;
-				display: flex;
-
-				justify-content: center;
-				.content-wrap {
-					transform: rotate(90deg);
-				}
-			}
-			.left-lower {
-				height: 40vh;
-				width: 25vw;
-				display: flex;
-				justify-content: center;
-				.content-wrap {
-					transform: rotate(90deg);
-				}
-			}
-		}
-		.image-container {
-			height: 80vh;
-			width: 50vw;
-		}
-		.right-wrap {
-			display: flex;
-			flex-direction: column;
-			.right-upper {
-				height: 40vh;
-				width: 25vw;
-				display: flex;
-				justify-content: center;
-				.content-wrap {
-					transform: rotate(90deg);
-				}
-			}
-			.right-lower {
-				height: 40vh;
-				width: 25vw;
-				display: flex;
-				justify-content: center;
-				.content-wrap {
-					transform: rotate(90deg);
-				}
-			}
+			color: black;
+			font-size: 70px;
+			font-family: "Raleway";
+			margin: 0;
+			transition: 0.5s ease;
 		}
 	}
-	.bottom-wrap {
-		background-color: whitesmoke;
-		display: flex;
-
-		.bar-wrap {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+	.image-wrap:hover {
+		opacity: 0.8;
+		transition: 0.5s ease;
+		p {
+			opacity: 1;
+			transition: 0.5s ease;
+			font-weight: 300;
+			text-shadow: 1px 1px #ebebeb;
 		}
 	}
 }

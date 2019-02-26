@@ -73,9 +73,7 @@ get_header(); ?>
                 <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> Beam me back home</a>
         </div>
         <div class="astronaut">
-            <div class="astronaut-icon">
-                <i class="fas fa-user-astronaut"></i>
-            </div>
+
             <div class="astronaut-location">
                 <h5>Orbiting:</h5>
                 <h5 class="current-location">New York, NY</h5>
