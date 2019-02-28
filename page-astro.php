@@ -2,6 +2,7 @@
 /**
  * Template Name: Astro Page
  */
+$space_image = get_field('space_image'); 
 
  get_header();
 ?>
@@ -11,11 +12,9 @@
     <div class="page-wrap">
         <div class="div-wrap">
             <div class="text-wrap">
-                <h2>Astro is everywhere.</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and
-                    scrambled it to make a type specimen book.</p>
+                <h2>Astro</h2>
+                <img src="<?php echo $space_image; ?>" />
+                <h3>is everywhere.</h3>
             </div>
 
             <div class="slider-wrap">
@@ -45,34 +44,6 @@
             </div>
         </div>
 
-        <div class="page-footer">
-            <div class="footer-menu-1">
-                <div class="backtrack-link">
-                    <a href="/home/">
-                        <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> Beam me back home</a>
-                </div>
-                <div class="astronaut">
-                    <div class="astronaut-icon">
-                        <i class="fas fa-user-astronaut"></i>
-                    </div>
-                    <div class="astronaut-location">
-                        <h5>Orbiting:</h5>
-                        <h5 class="current-location">New York, NY</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-menu-2">
-                <div class="menu-right right-about">
-                    <a href="/about/">About</a>
-                </div>
-                <div class="menu-right right-contact">
-                    <a href="/contact/">Contact</a>
-                </div>
-                <div class="menu-right right-instagram">
-                    <a href="www.instagram.com/andreaibarra/">Instagram</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <?php get_footer();?>
+
+        <?php get_footer();?>

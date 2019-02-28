@@ -9,11 +9,12 @@ console.log("hello");
 $(document).ready(function() {
 	$(".slider-wrap").slick({
 		dots: true,
-		infinite: false,
+		infinite: true,
 		speed: 500,
 		cssEase: "linear",
 		autoplay: true,
-		autoplaySpeed: 4000
+		autoplaySpeed: 4000,
+		arrows: false
 	});
 
 	document.querySelector("body").classList.add("fade-in");
@@ -23,6 +24,7 @@ $(document).ready(function() {
 		infinite: true,
 		speed: 300,
 		slidesToShow: 1,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		arrows: true
 	});
 });

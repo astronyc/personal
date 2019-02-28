@@ -1,26 +1,28 @@
 </div>
 
 <footer class="site-footer">
-  <div class="grid-container">
-    <div class="grid-x grid-padding-x">
-      <nav class="large-auto cell footer-nav">
-        <ul class="vertical medium-horizontal menu">
-          <li><a href="https://wordpress.org" target="_blank" title="Built with WordPress"><i class="fa fa-wordpress"
-                aria-hidden="true"></i> <span class="hide">Built by Astro</span></a></li>
-          <?php 
-              wp_nav_menu(array(
-                'container' => false,
-                'menu_class' => '',
-                'theme_location' => 'footer',
-                'items_wrap' => '%3$s',
-                'fallback_cb' => false
-              ));
-            ?>
-        </ul>
-      </nav>
-      <div class="large-shrink cell footer-credit">Copyright &copy;
-        <?php bloginfo('name'); ?>
-        <?php echo date("Y"); ?>
+  <div class="page-footer">
+    <div class="footer-menu-1">
+      <div class="backtrack-link">
+        <a href='/home/'>
+          <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> Beam me back home</a>
+      </div>
+      <div class="astronaut">
+        <div class="astronaut-location">
+          <h5>Orbiting:</h5>
+          <h5 class="current-location">New York, NY</h5>
+        </div>
+      </div>
+    </div>
+    <div class="footer-menu-2">
+      <div class="menu-right right-about">
+        <a href="/about/">About</a>
+      </div>
+      <div class="menu-right right-contact">
+        <a href="/contact/">Contact</a>
+      </div>
+      <div class="menu-right right-instagram">
+        <a href="www.instagram.com/andreaibarra/">Instagram</a>
       </div>
     </div>
   </div>

@@ -61,26 +61,4 @@
 			</div>
 		</div>
 
-		<!--<nav class="navBar">
-			<nav class="wrapper">
-				<div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<h1>drea ibarra</h1>
-					</a></div>
-
-				<div class="menu-toggle-wrap">
-					<input type="checkbox" id="menu-toggle" />
-					<label for="menu-toggle" class="label-toggle"></label>
-					<ul>
-						<?php wp_nav_menu(array(
-							'theme_location' => 'primary',
-							'container' => false,
-							'items_wrap' => '%3$s', // removes the <ul> from the menu as we're using our own markup
-							'fallback_cb' => mytheme_menu_fallback
-						)); ?>
-					</ul>
-				</div>
-
-			</nav>
-			</nav>-->
-
 		<div class="site-content">

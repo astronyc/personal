@@ -30,10 +30,6 @@ endif;
 ?>
     </div>
 
-
-    <div class="horizontal-scroll-wrap">
-
-    </div>
 </div>
 
 
