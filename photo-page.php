@@ -19,7 +19,6 @@ get_header(); ?>
                 <p>
                     <?php the_sub_field('photo_project_title'); ?>
                 </p>
-
             </div>
         </a>
         <?php endwhile; ?>

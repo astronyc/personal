@@ -109,25 +109,6 @@ body {
 	}
 }
 
-// Base Styles
-
-h1 {
-	font-size: 3em;
-	a {
-		text-decoration: none;
-	}
-}
-
-.logo {
-	display: inline-block;
-	margin: 0;
-	h1 {
-		margin: 0;
-		text-decoration: none;
-		color: black;
-	}
-}
-
 //  Home Page
 .landing-wrap {
 	.inner-wrap {
@@ -236,45 +217,20 @@ h1 {
 	}
 }
 
-.bottom-navbar-landing {
-	background-color: #cca096;
-	padding: 20px 0;
-	color: whitesmoke;
-
-	ul {
-		margin: 0;
-		list-style: none;
-		display: flex;
-		justify-content: space-evenly;
-		padding: 0;
-		font-family: "Raleway";
-		li {
-			a {
-				text-decoration: none;
-				color: whitesmoke;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-			}
-		}
-	}
-}
 .page-id-38 footer {
 	.footer-menu-1 {
-		display: flex;
-		align-items: flex-end;
+		align-items: flex-start;
+		@include bp(medium) {
+			display: flex;
+			align-items: flex-end;
+		}
 		.backtrack-link {
 			display: none;
-		}
-		.astronaut {
-			display: flex;
 		}
 	}
 }
 
 // Main Photography Page
-.top-wrap {
-	height: 100vh;
-}
 .photo-wrap {
 	background-size: cover;
 	background-position: center;
@@ -387,28 +343,13 @@ h1 {
 				}
 			}
 		}
+		.box {
+			background-color: red;
+		}
 		.box:hover {
 			opacity: 1;
 			transition: 0.3s ease;
 			filter: drop-shadow(0 0 30px #333);
-		}
-		.box1 {
-			background-color: orange;
-		}
-		.box2 {
-			background-color: lightgreen;
-		}
-		.box3 {
-			background-color: blue;
-		}
-		.box4 {
-			background-color: red;
-		}
-		.box5 {
-			background-color: pink;
-		}
-		.box6 {
-			background-color: yellow;
 		}
 	}
 }
@@ -457,7 +398,6 @@ h1 {
 }
 
 // Astro Project Page
-
 #astro-page {
 	.text-wrap {
 		color: whitesmoke;
@@ -641,21 +581,29 @@ h1 {
 
 // Footer
 .page-footer {
+	text-align: center;
+	color: red;
 	display: flex;
-	justify-content: space-between;
-	margin: 10px 90px;
-
+	flex-direction: column;
+	align-items: center;
+	@include bp(small) {
+		text-align: left;
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 90px;
+	}
 	a {
-		font-family: "Raleway";
-		font-size: 14px;
-		font-weight: 400;
-		text-transform: uppercase;
-		text-decoration: none;
-		letter-spacing: 4px;
-		color: black;
-		line-height: 2.5em;
+		text-align: center;
 		@include bp(small) {
-			color: red;
+			text-align: right;
+			font-family: "Raleway";
+			font-size: 14px;
+			font-weight: 400;
+			text-transform: uppercase;
+			text-decoration: none;
+			letter-spacing: 4px;
+			color: black;
+			line-height: 2.5em;
 		}
 	}
 	a:hover {
@@ -663,9 +611,11 @@ h1 {
 	}
 	.footer-menu-1 {
 		display: flex;
-		justify-content: flex-end;
+		align-items: flex-start;
 		flex-direction: column;
-
+		@include bp(medium) {
+			justify-content: flex-end;
+		}
 		.astronaut {
 			display: flex;
 			flex-direction: row;
@@ -695,7 +645,10 @@ h1 {
 		display: flex;
 		flex-direction: column;
 		.menu-right {
-			align-self: flex-end;
+			align-self: flex-start;
+			@include bp(medium) {
+				align-self: flex-end;
+			}
 		}
 	}
 }

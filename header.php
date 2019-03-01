@@ -17,7 +17,7 @@
 	<?php
 	// Connect to the Browsersync server
 	$dev_hostname = "localhost:8000";
-	if( (strpos($_SERVER['SERVER_NAME'], ".") === false) || ($_SERVER['SERVER_NAME'] === $dev_hostname) ) {
+	if( (strpos($_SERVER['SERVER_NAME'], "lo") === false) || ($_SERVER['SERVER_NAME'] === $dev_hostname) ) {
 		echo "<script type=\"text/javascript\" id=\"__bs_script__\">document.write(\"<script async src='http://HOST:3000/browser-sync/browser-sync-client.js'><\/script>\".replace(\"HOST\", window.location.hostname));</script>";
 	}
 ?>

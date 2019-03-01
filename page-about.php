@@ -36,7 +36,7 @@ get_header(); ?>
                 </div>
                 <div class="right-wrap">
                     <div class="title-wrap">
-                        <h3> Exhibitions </h3>
+                        <h3>Exhibitions</h3>
                     </div>
                     <?php if(get_field('exhibitions')): ?>
                     <div class="paragraph-wrap">
@@ -48,38 +48,36 @@ get_header(); ?>
                         <h4>
                             <?php the_sub_field("location"); ?>
                         </h4>
-                        <br>
+                        <br class="display">
                         <?php endwhile; ?>
+
                     </div>
                     <?php endif; ?>
                 </div>
+            </div>
+            <div class="row row1">
+                <div class="text-wrap">
+                    <h3>About Drea</h3>
+                </div>
+                <div class="paragraph-wrap">
+                    <p>hello Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                        has
+                        been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of
+                        type
+                        and
+                        scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
 
-            </div>
-        </div>
-        <div class="row row1">
-            <div class="text-wrap">
-                <h3>About Drea</h3>
-            </div>
-            <div class="paragraph-wrap">
-                <p>hello Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has
-                    been
-                    the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                    of
-                    type
-                    and
-                    scrambled it to make a type specimen book.</p>
-            </div>
         </div>
 
     </div>
 
 </div>
 
-</div>
-
-</div>
 
 
 
