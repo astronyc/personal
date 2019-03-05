@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<div class="container-wrapper">
+<div class="project-wrapper">
     <div class="scrolling-wrapper">
         <?php
 
@@ -24,10 +24,12 @@ if( have_rows('slider_image') ):
 else :
 
     // no rows found
+    
 
 endif;
 
 ?>
+
     </div>
 
 </div>

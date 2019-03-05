@@ -34,31 +34,42 @@
 
 
 
+
 </head>
 
 <body <?php body_class(); ?>>
 
-	<div class="navbar">
-		<div class="navbar-wrapper">
-			<div class="content-wrap">
-				<div class="title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<h1>Drea Ibarra</h1>
-				</div>
-				<div class="menu-items">
-					<menu>
+	<div class="content-wrap">
+		<div class="title">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<h1>Drea Ibarra</h1>
+			</a>
+		</div>
+		<div class="menu-items">
+			<nav>
+				<input type="checkbox" id="checkbox1" />
+				<label for="checkbox1">
+					<ul class="menu first">
 						<div>
 							<li class="link li-photography"><a href="/photography/">Photographer</a></li>
 						</div>
 						<div>
-							<li class="link li-developer"><a href="/web-developer/">Developer</a></li>
+							<li class="link li-developer"><a href="/web-dev/">Developer</a></li>
 						</div>
 						<div>
-							<li class="link li-astronaut"><a href="/astro/">Space Deviant</a></li>
+							<li class="link li-astro"><a href="/astro/">Space Deviant</a></li>
 						</div>
-					</menu>
-				</div>
-			</div>
-		</div>
 
-		<div class="site-content">
+					</ul>
+					<span class="toggle">☰</span>
+				</label>
+			</nav>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="site-content">
